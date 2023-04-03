@@ -6,6 +6,7 @@ import {client} from '../../libs/sanity.clients'
 import {PreviewSuspense} from 'next-sanity/preview'
 import Head from 'next/head'
 import Card from '@/components/category/coding/catCard'
+import Link from 'next/link'
 
 const PreviewMovies = lazy(() => import('../../components/PreviewMovies'))
 
@@ -49,9 +50,9 @@ export default function Home({
             <div>
               <ul className="flex">
                 <li>
-                  <a href="">
+                  <Link href="">
                     Home <span className="mx-2">/</span>{' '}
-                  </a>
+                  </Link>
                 </li>
                 <li>How to</li>
               </ul>
