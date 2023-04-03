@@ -100,8 +100,7 @@ export default function Home({
               Coding
             </span>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4 ">
-              {/* <Coding movies={data1} /> */}
-              ku
+              <Coding movies={data1} />
             </div>
           </div>
           <div className="col-span-2 bg-white mt-3">
@@ -109,8 +108,7 @@ export default function Home({
               How To
             </span>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4 ">
-              {/* <Coding movies={data2} /> */}
-              yj
+              <Coding movies={data2} />
             </div>
           </div>
         </div>
