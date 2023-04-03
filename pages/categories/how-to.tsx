@@ -49,7 +49,7 @@ export default function Home({
             <div>
               <ul className="flex">
                 <li>
-                  <a href="/">
+                  <a href="">
                     Home <span className="mx-2">/</span>{' '}
                   </a>
                 </li>

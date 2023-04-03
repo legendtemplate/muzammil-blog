@@ -8,12 +8,13 @@ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!
 
 export default defineConfig({
-  basePath: '/studio', 
+  basePath: '/studio', // <-- important that `basePath` matches the route you're mounting your studio from, it applies to both `/pages` and `/app`
+
   name: 'Blog-content-Studio',
   title: 'Blog-content-Studio',
 
-projectId,
-  dataset,
+  projectId: "qg8dvno7",
+  dataset: "production" ,
 
   plugins: [deskTool(), visionTool(),vercelDeployTool(),],
   schema: {
