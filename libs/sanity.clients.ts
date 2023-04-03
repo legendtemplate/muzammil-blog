@@ -5,8 +5,8 @@ export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION 
 
 export const client = createClient({
-  projectId,
-  dataset,
+  projectId: "qg8dvno7",
+  dataset: "production" ,
   apiVersion, // https://www.sanity.io/docs/api-versioning
   useCdn: true, // if you're using ISR or only static generation at build time then you can set this to `false` to guarantee no stale content
 })

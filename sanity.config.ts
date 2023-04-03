@@ -13,8 +13,8 @@ export default defineConfig({
   name: 'Blog-content-Studio',
   title: 'Blog-content-Studio',
 
-projectId,
-  dataset,
+  projectId: "qg8dvno7",
+  dataset: "production" ,
 
   plugins: [deskTool(), visionTool(),vercelDeployTool(),],
   schema: {
