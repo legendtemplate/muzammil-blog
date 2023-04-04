@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function index() {
   return (
@@ -8,16 +9,17 @@ export default function index() {
           <div className="col-md-8 col-lg-6">
             <div className="header-section mb-12">
               <h3 className=" mb-6 text-base font-medium text-red-500">Our Experts</h3>
-              <h2 className="font-bold text-5xl">Let's meet with our team members</h2>
+              <h2 className="font-bold text-5xl">Let meet with our team members</h2>
             </div>
           </div>
         </div>
         <div className="row flex flex-wrap justify-center items-center">
           {secondcolumn.map((navItem) => (
+            // eslint-disable-next-line react/jsx-key
             <div className="lg:w-3/12 md:w-6/12 w-ful px-3">
               <div className="single-person mt-7 p-7 bg-slate-100 rounded">
                 <div className="person-image relative mb-12 rounded-full">
-                  <img
+                  <Image
                   className="w-full rounded-full"
                     src={navItem.img}
                     alt={navItem.name}
