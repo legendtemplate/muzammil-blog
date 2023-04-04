@@ -1,4 +1,6 @@
 import {defineField, defineType} from 'sanity'
+import { LinkIcon } from '@sanity/icons'
+import blockContent from './blockContent'
 
 export default defineType({
   name: 'posts',
@@ -49,6 +51,11 @@ export default defineType({
       type: 'array',
       of: [{type: 'reference', to: {type: 'tag'}}],
     }),
+    {
+      name: 'someName',
+       title: 'Some title',
+     type: 'blockContent'
+     },
     defineField({
       name: 'category',
       title: 'Category',
@@ -61,12 +68,7 @@ export default defineType({
       type: 'date',
     }),
    
-    ({
-      title: 'body', 
-      name: 'body',
-      type: 'array', 
-      of: [{type: 'block'}]
-    }),
+  
     defineField({
       name: 'recent',
       title: 'Recent',

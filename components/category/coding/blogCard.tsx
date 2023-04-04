@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import imageUrlBuilder from '@sanity/image-url'
 import {client} from '../../../libs/sanity.clients'
 import type {SanityDocument} from '@sanity/client'
@@ -8,6 +8,7 @@ import Image from 'next/image'
 const builder = imageUrlBuilder(client)
 
 export default function blogCard({movies}: {movies: SanityDocument[]}) {
+ 
   return (
     <>
       {movies.map((movie) => (
@@ -34,6 +35,7 @@ export default function blogCard({movies}: {movies: SanityDocument[]}) {
           />
         </div>
       ))}
+   
     </>
   )
 }

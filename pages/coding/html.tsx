@@ -5,6 +5,7 @@ import type {SanityDocument} from '@sanity/client'
 import {client} from '../../libs/sanity.clients'
 import {PreviewSuspense} from 'next-sanity/preview'
 import Head from 'next/head'
+import Link from 'next/link'
 import Card from '@/components/category/html/catCard'
 
 const PreviewMovies = lazy(() => import('../../components/PreviewMovies'))
@@ -47,18 +48,18 @@ export default function css({
               <h1 className="text-3xl text-black font-medium text-start py-2">Blog Website</h1>
             </div>
             <div>
-              <ul className="flex">
+            <ul className="flex">
                 <li>
-                  <a href="">
+                  <Link href="/">
                     Home <span className="mx-2">/</span>{' '}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link href="/categories/coding">
                   Coding <span className="mx-2">/</span>{' '}
-                  </a>
+                  </Link>
                 </li>
-                <li>css</li>
+                <li>HTML</li>
               </ul>
             </div>
           </div>

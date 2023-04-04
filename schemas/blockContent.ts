@@ -1,22 +1,23 @@
 import {defineType, defineArrayMember} from 'sanity'
-
-/**
- * This is the schema definition for the rich text fields used for
- * for this blog studio. When you import it in schemas.js it can be
- * reused in other parts of the studio with:
- *  {
- *    name: 'someName',
- *    title: 'Some title',
- *    type: 'blockContent'
- *  }
- */
-
+import MarkerIcon from '@sanity/icons'
 
 export default defineType({
   title: 'Block Content',
   name: 'blockContent',
   type: 'array',
   of: [
+    
+    // {
+      // type: 'image',
+      // fields: [
+      //   {
+      //     name: 'alt',
+      //     type: 'string',
+      //     title: 'Alternative text',
+      //     description: 'Important for SEO and accessiblity.',
+      //   },
+      // ],
+    // },
     defineArrayMember({
       title: 'Block',
       type: 'block',
@@ -31,17 +32,21 @@ export default defineType({
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
+        {title: 'Intro', value: 'intro p-8 bg-red-400'},
+        {title: 'Div', value: 'div'},
+        {title: 'pre', value: 'pre'},
       ],
       lists: [{title: 'Bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the block editor.
       marks: {
-        // Decorators usually describe a single property – e.g. a typographic
-        // preference or highlighting by editors.
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
           { title: 'Code', value: 'code' },
-          { title: 'Highlight', value: 'highlight' }
+          {
+            title: 'Highlight',
+            value: 'highlight',
+          },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [

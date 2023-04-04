@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import blockContent from '../blockContent'
 
 export default defineType({
   name: 'css',
@@ -55,23 +56,17 @@ export default defineType({
         hotspot: true,
       },
     }),
-    ({
-      title: 'body', 
-      name: 'body',
-      type: 'array', 
-      marks: {
-        annotations: [
-          {name: 'color', title: 'Color', type: 'color'}
-        ]
-      },
-      of: [{type: 'block'}]
-    }),
     defineField({
       name: 'tag',
       title: ' Tag',
       type: 'array',
       of: [{type: 'reference', to: {type: 'tag'}}],
     }),
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent'
+     },
   ],
 
   preview: {

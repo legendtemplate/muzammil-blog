@@ -110,7 +110,10 @@ export default function Page({post}: PageProps) {
             </div>
             <div className="p-4  leading-10 tracking-wider">
               <p>
-                <PortableText value={body} />
+                <PortableText value={body} 
+                components={myPortableTextComponents}
+                  />
+              
               </p>
             </div>
             <div className="tag pb-6">
@@ -143,3 +146,13 @@ interface data {
 
 
 
+interface BlockProps {
+  children: React.ReactNode;
+}
+
+const myPortableTextComponents = {
+  block: {
+    h1: ({children}: BlockProps) => <h1 className="text-2xl">{children}</h1>,
+    pre: ({children}: BlockProps) => <span className="border-l-purple-500 text-5xl font-bold text-center">{children}</span>,
+  },
+};

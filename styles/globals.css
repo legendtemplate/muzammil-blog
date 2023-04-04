@@ -1,7 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+h1{
+  padding: 20px;
+  background-color: #016cec;
+  font-size: 50px;
+  font-weight: 900;
+}
+intro{
+  padding: 20px;
+  background-color: #016cec; 
+  font-size: 50px;
+  font-weight: 900;
+}
 .snip1527 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   color: #ffffff;
