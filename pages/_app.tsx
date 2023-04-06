@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
    <>
     <Head>
-      <meta name="google-site-verification" content="yMn1Ll8750_fkY7xcZNwMLuAL3kuCMxkhO-sF_ZJkOM" />
+   <meta name="google-site-verification" content="yMn1Ll8750_fkY7xcZNwMLuAL3kuCMxkhO-sF_ZJkOM" /> 
       <meta key="og_site_name" property="og:site_name" content="Muzammil Blog" />
         <meta key="og_locale" property="og:locale" content="en_IE" />
         <link rel="shortcut icon" href="/favicon.ico" />
