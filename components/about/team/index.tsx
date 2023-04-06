@@ -42,6 +42,7 @@ export default function index() {
 }
 
 interface NavItem {
+  id:string,
   speciality: string;
   name: string;
   img: string;
