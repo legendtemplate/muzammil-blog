@@ -15,7 +15,7 @@ export default function index() {
         </div>
         <div className="row flex flex-wrap justify-center items-center">
           {secondcolumn.map((navItem) => (
-            <div className="lg:w-3/12 md:w-6/12 w-ful px-3" key={navItem.id}>
+            <div className="lg:w-3/12 md:w-6/12 w-ful px-3" >
               <div className="single-person mt-7 p-7 bg-slate-100 rounded">
                 <div className="person-image relative mb-12 rounded-full">
                   <Image
