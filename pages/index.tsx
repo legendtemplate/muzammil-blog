@@ -127,10 +127,13 @@ import Home from "@/components/home/hero"
 import Card from "@/components/home/card"
 import Cat from "@/components/home/cat"
 import Banner from "@/components/home/banner"
-
+import Head from "next/head";
 export default function index() {
   return (
     <div>
+      <Head>
+       <meta name="google-site-verification" content="yMn1Ll8750_fkY7xcZNwMLuAL3kuCMxkhO-sF_ZJkOM" />
+      </Head>
       <Home />
       <Banner />
       <Card />
