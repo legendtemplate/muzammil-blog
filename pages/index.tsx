@@ -132,7 +132,7 @@ export default function index() {
   return (
     <div>
       <Head>
-       <meta name="google-site-verification" content="yMn1Ll8750_fkY7xcZNwMLuAL3kuCMxkhO-sF_ZJkOM" />
+      <meta name="google-site-verification" content="yMn1Ll8750_fkY7xcZNwMLuAL3kuCMxkhO-sF_ZJkOM" />
       </Head>
       <Home />
       <Banner />
