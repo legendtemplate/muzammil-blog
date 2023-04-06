@@ -23,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts", "libs/sanity.js"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }

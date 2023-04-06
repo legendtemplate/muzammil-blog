@@ -1,17 +1,174 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-h1{
-  padding: 20px;
-  background-color: #016cec;
-  font-size: 50px;
-  font-weight: 900;
+body{
+  font-family: Verdana,sans-serif;    
+  line-height: 1.5;
 }
-intro{
-  padding: 20px;
-  background-color: #016cec; 
+/* intro */
+.intro {
+  margin-top:10px;
+  font-size: 18px;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  color: #000!important;
+  font-family: Verdana,sans-serif;    
+  line-height: 1.5;
+}
+.codetop{color: #000077}
+.codeleft{
+  color: #007700
+}
+.code{
+  background: #ffffff; 
+overflow:auto;
+width:auto;
+border:solid gray;
+border-width:.1em .1em .1em .8em;
+padding:.2em .6em;
+}
+.code-num {
+  margin: 0; line-height: 125%
+}
+.h2 {
+  font-size: 25px;
+}
+
+.h2, .h3tag {
+  font-family: erdana,helvetica,arial,sans-serif;
+  color: #610b38;
+  font-weight: 400;
+}
+hr {
+  margin-top: 10px;
+  margin: 20px -16px;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border-top: 1px solid #f3bfbf;
+}
+.head{
   font-size: 50px;
-  font-weight: 900;
+  color: red;
+}
+.w3-note, .w3-warning {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left:-32px;
+  margin-right:-32px;
+  padding:16px 32px;
+}
+.w3-note {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+  /* background-color: #ffdddd; */
+  /* border-left: 6px solid #f44336; */
+}
+.w3-panel {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
+p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  font-size: 15px;
+}
+.w3-info {
+  background-color:#D9EEE1;
+  border-left: none;
+  padding:32px;
+  margin:24px;
+  margin-left:-32px;
+  margin-right:-32px;
+}
+
+.w3-example {
+  padding: 8px 20px;
+  margin: 24px -20px;
+  box-shadow:none!important;
+}
+.w3-note, .w3-warning {
+  border-left: none;
+}
+table.alt tr:nth-child(odd) {
+  background-color: #eff1eb
+}
+
+table.alt tr:nth-child(even) {
+  background-color: #fff
+}
+
+table.alt tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit
+}
+
+table.alt,table.alt td {
+  border: 1px solid #c7ccbe;
+  text-align: left
+}
+
+table.alt {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%
+}
+
+table.alt td {
+  padding: 8px;
+  vertical-align: top
+}
+
+table.alt th {
+  color: #000;
+  background-color: #c7ccbe;
+  font-size: 17px;
+  font-family: times new roman;
+  padding: 12px;
+  vertical-align: top;
+  text-align: left
+}
+
+.w3-info .w3-btn {
+  background-color: #04AA6D;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 6px;
+}
+.w3-codespan {
+  font-size: 105%;
+  font-family: Consolas,Menlo,"courier new",monospace; 
+  color: crimson;
+  background-color: #f1f1f1;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.banner{
+  font-weight: bolder;
+  font-size: 78px;
+  background-color: #000000;
+  color: #ffffff;
+}
+h5{
+  background-color: #D9EEE1;
+    border-left: none;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 16px;
+    padding-bottom: 5px;
+    margin: 24px;
+    margin-left: -32px;
+    margin-right: -32px;
+    font-size: 16px;
+    font-family: Verdana,sans-serif;
 }
 .snip1527 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);

@@ -14,7 +14,7 @@ export default function catCard({movies}: {movies: SanityDocument[]}) {
                 title={movie.title}
                 description={movie.description}
                 poster={movie.poster}
-                slug={'/coding/html/' + movie.slug}
+                slug={'/coding/html/'}
               />
             </div>
           ))}

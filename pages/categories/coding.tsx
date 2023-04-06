@@ -4,10 +4,8 @@ import {groq} from 'next-sanity'
 import type {SanityDocument} from '@sanity/client'
 import {client} from '../../libs/sanity.clients'
 import {PreviewSuspense} from 'next-sanity/preview'
-import Head from 'next/head'
 import Card from '@/components/category/coding/catCard'
 import Link from 'next/link'
-
 const PreviewMovies = lazy(() => import('../../components/PreviewMovies'))
 
 const query1 = groq`*[_type == "category" && filter == "coding"  && defined(slug.current)]{

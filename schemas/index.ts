@@ -1,4 +1,3 @@
-import blockContent from './blockContent'
 import category from './category'
 import posts from './posts'
 import author from './author'
@@ -12,7 +11,6 @@ export const schemaTypes = [
     category, 
     tag, 
     Css, 
-    Html, 
-    blockContent
+    Html
 ]
 

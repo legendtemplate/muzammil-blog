@@ -142,3 +142,205 @@
 
 
 
+// import { groq } from 'next-sanity'
+// import Head from 'next/head'
+// import Link from 'next/link'
+
+// import { client } from '../../../libs/sanity.clients'
+// import link from 'next/link'
+// const builder = imageUrlBuilder(client);
+// // export * from './.js'
+// const query = groq`*[_type == "css" && slug.current == $slug]{
+//   _id,
+//   title,
+//   description,
+//   body,
+//   poster,
+//   publishedAt,
+//   "slug":slug.current,
+//   category->{title,"slug": slug.current},
+//   author->{name,bio,poster,"slug":slug.current,},
+//   "tag": tag[]->{title,"slug": slug.current},
+// }`
+
+// export const getStaticProps: GetStaticProps = async () => {
+
+//   const post = await client.fetch(query)
+
+//   return {
+//     props: {
+//       post,
+//     },
+//   }
+// }
+// type TagList = {
+//   title: string
+//   slug: string
+// }
+// type PageProps = {
+//   post: {
+//     tag: Array<TagList>
+//     body: []
+//     publishedAt: string
+//     author: any
+//     category: any
+//     overview: string
+//     title: string
+//     poster: string
+//     slug: string
+//     movie: SanityDocument
+//   }
+// }
+// const DOMAIN = 'https://muzammil-blog.vercel.app/'
+// const canonical = DOMAIN
+
+// export default function Page({post}: PageProps) {
+// const {title = 'title', category, author, publishedAt, tag, poster} = post
+// return (
+// <>
+{
+  /* content=*/
+}
+// <Head>
+//   <title>{post.title}</title>
+//   <meta name="description" content={post.overview} />
+//   <meta key="og_title" property="og:title" content={post.title} />
+//   <meta key="og_description" property="og:description" content={post.overview} />
+//   <meta key="og_url" property="og:url"
+//   // content={canonical ?? DOMAIN}
+//   // {`${title} | ${siteName}`}
+//   content={post.slug}
+//   />
+//   {/* <meta key="og_image" property="og:image"  */}
+//   {/* // content={post.poster}  */}
+//   {/* //  content={builder.image(post.poster).url()} */}
+//   {/* /> */}
+//   <meta key="og_image:alt" property="og:image:alt" content={post.title} />
+
+//   <meta name="robots" content="index,follow" />
+//   <meta key="twitter:title" property="twitter:title" content={post.title} />
+//   <meta key="twitter:description" property="twitter:description" content={post.overview} />
+//   <link rel="canonical" href={canonical ?? DOMAIN} />
+
+// </Head>
+
+// <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 md:p-4 p-1">
+//   <div className="col-span-3">
+//     <main className="bg-white md:p-3 p-1">
+//       <Poster poster={poster} title={title} />
+//       <div className="context pl-2">
+//         <Heading
+//           date={publishedAt}
+//           author={author.name}
+//           authorLink={author.slug}
+//           cat={category.title}
+//           catlink={category.slug}
+//           title={title}
+//           />
+//       </div>
+//       <div className="p-4  leading-6 tracking-wide">
+//         <p>
+
+//         </p>
+//       </div>
+//       <div className="tag pb-6">
+//         <ul className="flex">
+//           {tag && (
+//             <>
+//               {tag.map((tags: any) => (
+//                 <li key={tags}>
+//                   <Link href={tags.slug} className='bg-red-400 px-3 mr-4 rounded text-white py-2'>{tags.title}</Link>
+//                 </li>
+//               ))}
+//             </>
+//           )}
+//         </ul>
+//       </div>
+//     </main>
+//   </div>
+//   {/* <div>
+//     <Left />
+//   </div> */}
+// </div>
+//     </>
+//   )
+// }
+
+// interface data {
+//   title: string
+//   slug: string
+// }
+
+// import Coding from '@/components/category/coding/blogCard'
+// import {lazy} from 'react'
+// import {groq} from 'next-sanity'
+// import type {SanityDocument} from '@sanity/client'
+// import {client} from '../../../libs/sanity.clients'
+// import {PreviewSuspense} from 'next-sanity/preview'
+// import Head from 'next/head'
+// import Card from '@/components/category/css/catCard'
+// import Link from 'next/link'
+
+// const PreviewMovies = lazy(() => import('@/components/PreviewMovies'))
+// type TagList = {
+//   title: string
+//   slug: string
+// }
+// type PageProps = {
+//   title: string
+//   poster: string
+//   post: {
+//     tag: Array<TagList>
+//     body: []
+//     publishedAt: string
+//     author: any
+//     category: any
+//     overview: string
+//     title: string
+//     poster: string
+//     slug: string
+//     movie: SanityDocument
+//   }
+// }
+// const query = groq`*[_type == "css" && slug == "padding" && defined(slug.current)]{
+//   _id,
+//   title,
+//   description,
+//   body,
+//   poster,
+//   publishedAt,
+//   "slug":slug.current,
+//   category->{title,"slug": slug.current},
+//   author->{name,bio,poster,"slug":slug.current,},
+//   "tag": tag[]->{title,"slug": slug.current},
+// }`
+
+// export const getStaticProps: GetStaticProps = async () => {
+//   const data1 = await client.fetch(query)
+//   return {
+//     props: {
+//       data1,
+//     },
+//   }
+// }
+
+// export default function padding({data1}: {data1: PageProps[]}) {
+
+//     return(
+//       <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 md:p-4 p-1">
+//       <div className="col-span-3">
+//       {data1.map((movie) => (
+
+//         <>
+//             <main className="bg-white md:p-3 p-1">
+//               <Poster poster={movie.poster} title={movie.title} />
+//            </main>
+// </>
+//           ))}
+
+//       </div>
+//       </div>
+
+//     )
+
+// }

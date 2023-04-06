@@ -1,19 +1,25 @@
+import Content from '@/components/category/css/content'
+import ContentData from '@/components/category/css/margin'
 import {lazy} from 'react'
 import {groq} from 'next-sanity'
 import type {SanityDocument} from '@sanity/client'
-import {client} from '../../libs/sanity.clients'
+import {client} from '../../../libs/sanity.clients'
 import {PreviewSuspense} from 'next-sanity/preview'
-import Card from '@/components/category/css/catCard'
 import Link from 'next/link'
+const PreviewMovies = lazy(() => import('@/components/PreviewMovies'))
 
-const PreviewMovies = lazy(() => import('../../components/PreviewMovies'))
-
-const query1 = groq`*[_type == "css"  && defined(slug.current)]{
+const query1 = groq`*[_type == "css" && title == "margin" && defined(slug.current)]{
   _id,
   title, 
+  title, 
   description,
+  body,
   poster,
+  publishedAt,
   "slug":slug.current,
+  category->{title,"slug": slug.current},  
+  author->{name,bio,poster,"slug":slug.current,},  
+  "tag": tag[]->{title,"slug": slug.current},
 }`
 
 export const getStaticProps = async ({preview = false}) => {
@@ -25,21 +31,14 @@ export const getStaticProps = async ({preview = false}) => {
   return {props: {preview, data1}}
 }
 
-
-export default function css({
-  preview,
-  data1
-}: {
-  preview: Boolean
-  data1: SanityDocument[]
-}) {
+export default function margin({preview, data1}: {preview: Boolean; data1: SanityDocument[]}) {
   return preview ? (
     <PreviewSuspense fallback="Loading...">
       <PreviewMovies query={query1} />
     </PreviewSuspense>
   ) : (
     <>
-    <div className="bg-gray-100 h-40">
+      <div className="bg-gray-100 h-40">
         <div className="container mx-auto">
           <div className="flex py-10 flex-col">
             <div>
@@ -54,7 +53,7 @@ export default function css({
                 </li>
                 <li>
                   <Link href="/categories/coding">
-                  Coding <span className="mx-2">/</span>{' '}
+                    Coding <span className="mx-2">/</span>{' '}
                   </Link>
                 </li>
                 <li>css</li>
@@ -63,7 +62,15 @@ export default function css({
           </div>
         </div>
       </div>
-    <Card movies={data1} />
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 md:p-4 p-1">
+        <div className="col-span-3">
+          <Content movies={data1} />
+          <ContentData />
+        </div>
+        {/* <div>
+          <Left />
+        </div> */}
+      </div>
     </>
   )
 }
