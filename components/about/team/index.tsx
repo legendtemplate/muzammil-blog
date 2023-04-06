@@ -48,25 +48,21 @@ interface NavItem {
 
 const secondcolumn: Array<NavItem> = [
   {
-    id: 1,
     speciality: "Web Developer ",
     name: "Muhammad Muzammil Safdar",
     img: "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
   },
   {
-    id: 2,
     speciality: "Graphic Designer",
     name: "Muhammad Rashid Ali",
     img: "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
   },
   {
-    id: 3,
     speciality: "Data Entry",
     name: "Muhammad Imran Safdar",
     img: "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
   },
   {
-    id: 4,
     speciality: "Vedio Editing",
     name: "Muhammad Saim Saeed",
     img: "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
